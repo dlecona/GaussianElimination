@@ -7,7 +7,7 @@ How to use:
   2) for (n) lines, write the coefficients of each respective variable
   3) Lastly, on the final line, have the constants
   
-  EXAMPLE SYSTEM
+  Example System:
   
       1x1 + 2x2 + 3x3 = 1
       4x1 + 5x2 + 5x3 = 1
