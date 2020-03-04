@@ -10,7 +10,7 @@ How to use:
   Example System:
   
       1x1 + 2x2 + 3x3 = 1
-      4x1 + 5x2 + 5x3 = 1
+      4x1 + 5x2 + 6x3 = 1
       7x1 + 8x2 + 9x3 = 1
   File will look like this:
   
