@@ -21,3 +21,7 @@ How to use:
      1 1 1
     
  
+How to run:
+    Open terminal/cmd and place the program within the same folder as your system of equations file. 
+    Compile the java code using "javac gaussian.java" and run the code by using either of the following:
+      1) java 
