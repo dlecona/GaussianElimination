@@ -12,18 +12,18 @@ public class gaussian{
 	private static ArrayList<String> name;
 	
 	public static void main(String[] args) throws FileNotFoundException{
-    	//Asking user for file
 		
     	if(args.length == 1) {
-		//creating a file object to be able to read file data
+		//Initializing a file object to be able to read file data
     		file = args[0];
 	        File data = new File(args[0]);
 	        Scanner sc = new Scanner(data);
+		
 	        //checking to see if the file exists
 	        if(data.exists()) {
 	        	//creating a scanner class to read the file
 	            String num = sc.next();
-				numOfVars = Integer.parseInt(num);
+		    numOfVars = Integer.parseInt(num);
 	            float[][] coeff = new float[numOfVars][numOfVars];
 	            
 	            //grabbing the data from the file.
@@ -35,22 +35,27 @@ public class gaussian{
 	            Vector<Float> constants = new Vector<>(numOfVars);
 
 	            //adding values to the vector
-	            while(sc.hasNextFloat()){
-					constants.add(sc.nextFloat());
-				}
+	            while(sc.hasNextFloat())
+			constants.add(sc.nextFloat());
+				
+		    //closing the file scanner
 	            sc.close();
 	            
 	            //calling the naive Gaussian function
 	            naiveGaussian(coeff, constants);
 	        }
 	        else {
+			//If file doesn't exist, exit program
 	        	System.out.println("File does not exist);
 	        }
     	}
     	else {
+		//Initializing a file object to be able to read file data
     		file = args[1];
 	        File data = new File(file);
 	        Scanner sc = new Scanner(data);
+		
+		//checking to see if the file exists
     		if(data.exists()) {
 	        	//creating a scanner class to read the file
 	            String num = sc.next();
@@ -66,9 +71,10 @@ public class gaussian{
 	            Vector<Float> constants = new Vector<>(numOfVars);
 
 	            //adding values to the vector
-	            while(sc.hasNextFloat()){
-					constants.add(sc.nextFloat());
-				}
+	            while(sc.hasNextFloat())
+			constants.add(sc.nextFloat());
+		
+		    //closing the file scanner
 	            sc.close();
 	            
 	            //calling the naive Gaussian function
@@ -76,22 +82,22 @@ public class gaussian{
     		}
     	}
               try {
-				file = file.substring(0, file.lastIndexOf('.'));
-				FileWriter myWriter = new FileWriter(file + ".sol");
-				for(int i = 0; i < numOfVars; i++)
-					myWriter.write(Float.toString(sol.get(i)) + " ");
-	            myWriter.close();
-	            System.out.println("Solution file created successfully");
-			} catch (IOException e) {e.printStackTrace();}
+			file = file.substring(0, file.lastIndexOf('.'));
+			FileWriter myWriter = new FileWriter(file + ".sol");
+			for(int i = 0; i < numOfVars; i++)
+				myWriter.write(Float.toString(sol.get(i)) + " ");
+	           	myWriter.close();
+	            	System.out.println("Solution file created successfully");
+	      } catch (IOException e){e.printStackTrace();}
 	}
 
 	//Naive Guassian elimination set up
-    public static void naiveGaussian(float[][] coeff, Vector<Float> constants){
-    	sol = new Vector<>();
-    	sol.setSize(numOfVars);
-    	fwdElimination(coeff, constants);
-    	backSubst(coeff, constants, sol);
-    }
+    	public static void naiveGaussian(float[][] coeff, Vector<Float> constants){
+		sol = new Vector<>();
+		sol.setSize(numOfVars);
+		fwdElimination(coeff, constants);
+		backSubst(coeff, constants, sol);
+ 	}
     
     //Forward elimination 
 	private static void fwdElimination(float[][] coeff, Vector<Float> constants) {
@@ -101,7 +107,7 @@ public class gaussian{
 				//This grabs the multiple needed to make the next rows 0
 				float mult = coeff[j][i] / coeff[i][i];
 				
-				//THE PLANTED BUG!!! ITS SUPPOSED TO BE STARTING AT 0, NOT AT 1
+				//starts calculating the rows in order to eliminate leading coefficients
 				for(int k = i; k < numOfVars; k++) {
 					coeff[j][k] = coeff[j][k] - (mult * coeff[i][k]);
 				}
@@ -135,10 +141,10 @@ public class gaussian{
 	//Scaled Partial Pivoting Guassian Method!
 	private static void SPPGaussian(float[][] coeff, Vector<Float> constants) {
 		sol = new Vector<>();
-    	sol.setSize(numOfVars);
+    		sol.setSize(numOfVars);
+		
 		Vector<Integer> index = new Vector<>();
 		index.setSize(numOfVars);
-		sol.setSize(numOfVars);
 		//initializing index vector
 		for(int i = 0; i < numOfVars; i++)
 			index.set(i, i);
