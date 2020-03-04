@@ -46,7 +46,7 @@ public class gaussian{
 	        }
 	        else {
 			//If file doesn't exist, exit program
-	        	System.out.println("File does not exist);
+	        	System.out.println("File does not exist");
 	        }
     	}
     	else {
