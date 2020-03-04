@@ -44,7 +44,7 @@ public class gaussian{
 	            naiveGaussian(coeff, constants);
 	        }
 	        else {
-	        	System.out.println("File does not exist, make sure the file is named \"sys1.lin\".");
+	        	System.out.println("File does not exist);
 	        }
     	}
     	else {
