@@ -23,5 +23,15 @@ How to use:
  
 How to run:
     Open terminal/cmd and place the program within the same folder as your system of equations file. 
-    Compile the java code using "javac gaussian.java" and run the code by using either of the following:
-      1) java 
+    Compile the java code using:
+    
+    javac gaussian.java
+    
+    
+   Run the code by using either of the following:
+    
+      1) java gaussian sys1.lin
+      2) java gaussian --spp sys1.lin
+      
+    The first version will run the naive gaussian elimination
+    The second version will run scaled-partial pivoting gaussian elimination.
