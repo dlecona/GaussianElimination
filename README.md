@@ -33,13 +33,13 @@ How to run:
       1) java gaussian sys1.lin
       2) java gaussian --spp sys1.lin
       
-    The first version will run the naive gaussian elimination
+    The first version will run the naive gaussian elimination.
     The second version will run scaled-partial pivoting gaussian elimination.
     
 
 # What I Learned
-  • Keeping track of many for loops to be able to manipulate the system of equations.
+  • Keeping track of many for loops to be able to manipulate the system of equations
   
-  • Improved my ability to search and find bugs.
+  • Improved my ability to search and find bugs
   
   • Improved familiarity with Gaussian Elimination
