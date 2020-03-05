@@ -1,5 +1,5 @@
 # GaussianElimination
-A program that will compute a system of linear equations using Gaussian's naive solution or with scaled-partial pivoting.
+A program designed to compute a system of linear equations using Gaussian's naive solution or scaled-partial pivoting.
 
 How to use:
   Have a file with the following format
@@ -7,12 +7,14 @@ How to use:
   2) for (n) lines, write the coefficients of each respective variable
   3) Lastly, on the final line, have the constants
   
-  Example System:
+  Example of conversion from system to file:
+  
+  System:
   
       1x1 + 2x2 + 3x3 = 1
       4x1 + 5x2 + 6x3 = 1
       7x1 + 8x2 + 9x3 = 1
-  File will look like this:
+  File:
   
      3
      1 2 3
@@ -31,8 +33,8 @@ How to run:
     
    Run the code by using either of the following:
     
-      1) java gaussian sys1.lin
-      2) java gaussian --spp sys1.lin
+      java gaussian sys1.lin
+      java gaussian --spp sys1.lin
       
     The first version will run the naive gaussian elimination.
     The second version will run the scaled-partial pivoting gaussian elimination.
