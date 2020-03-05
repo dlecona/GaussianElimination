@@ -20,7 +20,8 @@ How to use:
      7 8 9
      1 1 1
     
- 
+Check out the 'exampleFile.lin' to get a clear look at the file.
+
 How to run:
     Open terminal/cmd and place the program within the same folder as your system of equations file. 
     Compile the java code using:
@@ -34,8 +35,16 @@ How to run:
       2) java gaussian --spp sys1.lin
       
     The first version will run the naive gaussian elimination.
-    The second version will run scaled-partial pivoting gaussian elimination.
+    The second version will run the scaled-partial pivoting gaussian elimination.
+ 
+Output:
+  The result of running this program will be the creation of a new file within the directory. This file will
+  have the same basename as the input file, except the extension will be '.sol'
+  
+Example Output:
     
+    Input file: sys1.lin
+    Output file: sys1.sol
 
 # What I Learned
   • Keeping track of many for loops to be able to manipulate the system of equations
