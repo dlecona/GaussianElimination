@@ -1,4 +1,4 @@
-# GaussianElimination
+# Gaussian Elimination
 A program designed to compute a system of linear equations using Gaussian's naive solution or scaled-partial pivoting.
 
 How to use:
