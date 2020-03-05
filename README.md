@@ -43,7 +43,7 @@ Output:
   The result of running this program will be the creation of a new file within the directory. This file will
   have the same basename as the input file, except the extension will be '.sol'
   
-Example Output:
+Example of output file created:
     
     Input file: sys1.lin
     Output file: sys1.sol
