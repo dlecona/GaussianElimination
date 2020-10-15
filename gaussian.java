@@ -154,6 +154,7 @@ public class gaussian{
 		SPPBackSubstitution(coeff, constants, sol, index);
 	}
 
+	//Forward Elimination
 	private static void SPPFwdElimination(float[][] coeff, Vector<Float> constants, Vector<Integer> index) {
 		Vector<Float> scaling = new Vector<>();
 		scaling.setSize(numOfVars);
@@ -197,6 +198,7 @@ public class gaussian{
 		}
 	}
 	
+	//Back Substitution
 	private static void SPPBackSubstitution(float[][] coeff, Vector<Float> constants, Vector<Float> sol,
 											Vector<Integer> index) {
 
